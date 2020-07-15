@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/simp/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/simp/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/simp/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/simp/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/simp/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/simp/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/simp/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/simp/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/simp/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/simp/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/simp/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/simp/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/simp/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/simp/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/simp/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/simp/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/simp/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/simp/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/simp/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/simp/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/simp/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/simp/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/simp/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/simp/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/simp/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/simp/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/simp/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/simp/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/simp/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/simp/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/simp/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/simp/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/simp/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/simp/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/simp/vendor/composer" />
+      <path value="$PROJECT_DIR$/simp/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/simp/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/simp/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/simp/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/simp/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/simp/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/simp/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/simp/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/simp/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/simp/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/simp/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/simp/vendor/novay/laravel-word-template" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1aCQXjO8dn5UMQvtq6xEmxr0fAr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/admin/hki" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\penelitian" />
+      <recent name="C:\wamp64\www\simp\assets\images" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\kap3m\home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\hki" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\pengabdian" />
+      <recent name="C:\wamp64\www\simp\assets\images" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views" />
+      <recent name="C:\wamp64\www\simp\simp\app\Http\Controllers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="" />
+      <created>1586237138824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586237138824</updated>
+      <workItem from="1586237145261" duration="15025000" />
+      <workItem from="1586330236911" duration="7909000" />
+      <workItem from="1587134620654" duration="467000" />
+      <workItem from="1588167527753" duration="1671000" />
+      <workItem from="1588172293897" duration="1549000" />
+      <workItem from="1588222758996" duration="17731000" />
+      <workItem from="1588308360628" duration="32174000" />
+      <workItem from="1588509434195" duration="13844000" />
+      <workItem from="1589812287638" duration="34000" />
+      <workItem from="1590994173350" duration="414000" />
+      <workItem from="1591112093132" duration="2391000" />
+      <workItem from="1591249692220" duration="2875000" />
+      <workItem from="1591588099203" duration="1060000" />
+      <workItem from="1591690651844" duration="7771000" />
+      <workItem from="1592314336734" duration="4143000" />
+      <workItem from="1592370959070" duration="8941000" />
+      <workItem from="1592728487038" duration="3795000" />
+      <workItem from="1592810479327" duration="10471000" />
+      <workItem from="1592922650324" duration="1751000" />
+      <workItem from="1593917218196" duration="9962000" />
+      <workItem from="1594012855473" duration="4923000" />
+      <workItem from="1594104226720" duration="4505000" />
+      <workItem from="1594130465968" duration="2585000" />
+      <workItem from="1594173818739" duration="6696000" />
+      <workItem from="1594630406971" duration="983000" />
+      <workItem from="1594698089201" duration="18450000" />
+      <workItem from="1594788846650" duration="9780000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_footer.blade.php</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
