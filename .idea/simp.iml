@@ -4,12 +4,14 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/simp/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/simp/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/simp/vendor/barryvdh/laravel-dompdf" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/simp/vendor/dompdf/dompdf" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/erusev/parsedown" />
@@ -36,6 +38,8 @@
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phenx/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phenx/php-svg-lib" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/phpdocumentor/type-resolver" />
@@ -53,6 +57,7 @@
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/psy/psysh" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/simp/vendor/sabberworm/php-css-parser" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/simp/vendor/sebastian/diff" />

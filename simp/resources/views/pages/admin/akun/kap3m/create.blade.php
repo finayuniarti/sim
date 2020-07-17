@@ -47,6 +47,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="example-email-input" class="col-md-2 col-form-label">Password</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <button class="btn btn-success" type="submit">Save</button>
                         </div>
                     </form>

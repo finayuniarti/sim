@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Novay\WordTemplate\WordTemplate;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class PenelitianController extends Controller
 {
@@ -91,6 +92,9 @@ class PenelitianController extends Controller
 
     public function pdf()
     {
-        return view('pages.reviewer.penelitian.pdf');
+        //return view('pages.reviewer.penelitian.pdf');
+        $pdf = PDF::loadView('pages.reviewer.penelitian.pdf');
+      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
+        return $pdf->setPaper('a4')->stream('laporan-pdf.pdf');
     }
 }

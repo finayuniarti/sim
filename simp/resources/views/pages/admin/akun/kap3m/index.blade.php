@@ -32,6 +32,7 @@
                         <tr>
                             <th>Nama Dosen</th>
                             <th>Email</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -39,6 +40,11 @@
                             <tr>
                                 <td>{{$data->name}}</td>
                                 <td>{{$data->email}}</td>
+                                <td>
+                                    <a class="btn btn-warning" href="{{ route('admin.kap3m.edit', $data->id) }}"
+                                    class="btn
+                                    btn-warning">Edit</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

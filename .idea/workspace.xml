@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="" />
+    <list default="true" id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/simp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/AkunKap3mController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/AkunKap3mController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PenelitianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PenelitianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +120,11 @@
       <path value="$PROJECT_DIR$/simp/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/simp/vendor/maatwebsite/excel" />
       <path value="$PROJECT_DIR$/simp/vendor/novay/laravel-word-template" />
+      <path value="$PROJECT_DIR$/simp/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/simp/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/simp/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/simp/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/simp/vendor/dompdf/dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aCQXjO8dn5UMQvtq6xEmxr0fAr" />
@@ -113,21 +132,22 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/admin/hki" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\penelitian" />
-      <recent name="C:\wamp64\www\simp\assets\images" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\kap3m\home" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\kap3m" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\hki" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\pengabdian" />
       <recent name="C:\wamp64\www\simp\assets\images" />
       <recent name="C:\wamp64\www\simp\simp\resources\views" />
-      <recent name="C:\wamp64\www\simp\simp\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\penelitian" />
+      <recent name="C:\wamp64\www\simp\assets\images" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\kap3m\home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -179,6 +199,9 @@
       <workItem from="1594630406971" duration="983000" />
       <workItem from="1594698089201" duration="18450000" />
       <workItem from="1594788846650" duration="9780000" />
+      <workItem from="1594812671736" duration="4922000" />
+      <workItem from="1594908188163" duration="2482000" />
+      <workItem from="1594967405741" duration="19758000" />
     </task>
     <servers />
   </component>
@@ -190,7 +213,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -202,6 +227,11 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_footer.blade.php</url>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/simp/app/Admin.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

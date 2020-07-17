@@ -89,6 +89,11 @@
       <path value="$PROJECT_DIR$/simp/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/simp/vendor/maatwebsite/excel" />
       <path value="$PROJECT_DIR$/simp/vendor/novay/laravel-word-template" />
+      <path value="$PROJECT_DIR$/simp/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/simp/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/simp/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/simp/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/simp/vendor/dompdf/dompdf" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

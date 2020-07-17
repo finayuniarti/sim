@@ -30,4 +30,23 @@ class AkunKap3mController extends Controller
         $data->save();
         return redirect()->route('admin.kap3m.index');
     }
+    public function edit($id)
+    {
+        $datas = KaP3M::find($id);
+        return view('pages.admin.akun.kap3m.edit', compact('datas'));
+
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = new KaP3M();
+        $data->name = $request->nama;
+        $data->email =$request->email;
+        $data->nidn =$request->nidn;
+        if ($request->password != null){
+            $data->password= Hash::make($request->password);
+        }
+        $data->save();
+        return redirect()->route('admin.kap3m.index')->with('success', 'Berhasil');
+    }
 }

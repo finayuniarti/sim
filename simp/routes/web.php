@@ -35,6 +35,8 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('akun/kap3m', 'Admin\AkunKap3mController@index')->name('admin.kap3m.index');
     Route::get('akun/kap3m/create', 'Admin\AkunKap3mController@create')->name('admin.kap3m.create');
     Route::post('akun/kap3m/store', 'Admin\AkunKap3mController@store')->name('admin.kap3m.store');
+    Route::get('akun/{id}/edit', 'Admin\AkunKap3mController@edit')->name('admin.kap3m.edit');
+    Route::patch('akun/update/{id}', 'Admin\AkunKap3mController@update')->name('admin.kap3m.update');
 });
 
 Route::group(['prefix' => 'user'], function (){
