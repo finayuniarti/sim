@@ -8,9 +8,18 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">PENILAIAN PROPOSAL PENGABDIAN</h4>
-                            <form action="#" method="post"
-                                  enctype="multipart/form-data">
+                            <h6 class="card-title">PENILAIAN PROPOSAL PENGABDIAN</h6>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <form action="{{ route('reviewer.pengabdian.pdf') }}" method="post">
                                 @csrf
                                 <div class="form-group row">
 
@@ -24,16 +33,23 @@
 
                                     <div class="col-md-5">
                                         <label for="example-email-input">Tema</label>
-                                        <input class="form-control" type="text" name="tema">
+                                        <input class="form-control {{ $errors->has('tema')?'is-invalid':''}}"
+                                               type="text" name="tema" value="{{old('tema')}}">
+                                        @if($errors->has('tema'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('tema') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                     <div class="col-md-4">
                                         <label>Program Studi</label>
-                                        <input class="form-control" readonly value="{{ $pengabdian->user->prodi }}">
+                                        <input class="form-control" name="prodi" readonly
+                                               value="{{ $pengabdian->user->prodi }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label for="example-email-input">Judul Pengabdian</label>
+                                        <label for="example-email-input">Judul Penelitian</label>
                                         <input class="form-control" readonly name="judul"
                                                value="{{ $pengabdian->judul }}">
                                     </div>
@@ -53,15 +69,24 @@
 
                                     <div class="col-md-3">
                                         <label for="example-email-input">Lama Penelitian</label>
-                                        <input class="form-control" type="text" name="lama teliti">
+                                        <input class="form-control {{ $errors->has('lama_teliti')?'is-invalid':''}}"
+                                               type="text" name="lama_teliti" value="{{old('lama_teliti')}}">
+                                        @if($errors->has('lama_teliti'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('lama_teliti') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label for="example-email-input">Anggota</label>
+                                        <input type="hidden" name="total_anggota"
+                                               value="{{ count($pengabdian->anggotas) }}">
                                         @foreach($pengabdian->anggotas as $anggota)
-                                            <input class="form-control" type="text" name="anggota" value="{{ $anggota->user->name}}">
+                                            <input class="form-control" type="text" readonly name="anggota"
+                                                   value="{{ $anggota->user->name}}">
                                         @endforeach
                                     </div>
                                 </div>
@@ -70,11 +95,23 @@
 
                                     <div class="col-md-6">
                                         <label for="example-email-input">Biaya Diusulkan</label>
-                                        <input class="form-control" type="text" name="biaya usul">
+                                        <input class="form-control {{ $errors->has('biaya_usul')?'is-invalid':''}}"
+                                               type="text" name="biaya_usul" value="{{old('biaya_usul')}}">
+                                        @if($errors->has('biaya_usul'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('biaya_usul') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                     <div class="col-md-6">
                                         <label for="example-email-input">Biaya Direkomendasikan</label>
-                                        <input class="form-control" type="text" name="biaya rekomendasi">
+                                        <input class="form-control {{ $errors->has('biaya_rekomendasi')?'is-invalid':''}}"
+                                               type="text" name="biaya_rekomendasi" value="{{old('biaya_rekomendasi')}}">
+                                        @if($errors->has('biaya_rekomendasil'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('biaya_rekomendasi') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -176,19 +213,20 @@
                                 </table>
                                 <td>
                                     <label>Keterangan:</label>
-                                    <h6>1.	Skor : </h6>
-                                    <p> -> 1, 2, 3, 5, 6, 7 (1 = buruk, 2 = sangat kurang, 3 = kurang, 5 = cukup, 6 = baik, 7 = sangat baik)</p>
-                                    <h6>2.	Nilai Tambah Publikasi Ilmiah :</h6>
+                                    <h6>1. Skor : </h6>
+                                    <p> -> 1, 2, 3, 5, 6, 7 (1 = buruk, 2 = sangat kurang, 3 = kurang, 5 = cukup, 6 =
+                                        baik, 7 = sangat baik)</p>
+                                    <h6>2. Nilai Tambah Publikasi Ilmiah :</h6>
                                     <p> -> Jurnal Nasional berissn Internal = 3</p>
-                                    <p> -> Jurnal Nasional Terakreditasi	=  7 </p>
-                                    <p> -> Jurnal Nasional berissn DOAJ		=  6</p>
-                                    <p> -> Jurnal Nasional berissn Eksternal	=  5</p>
-                                    <h6>3.	Nilai  =   Bobot × Skor 	(Konversasi nilai angka ke huruf dan dana yang dibiayai)</h6>
-                                    <p> -> 6.00 - 7.00   	=  Baik	(5 juta)</p>
-                                    <p> -> 4.00 - 5.99   		=  Cukup 	(4 juta)</p>
-                                    <p> -> 3.00 - 3.99   		=  Kurang (3 juta)</p>
-                                    <p> ->      <    2.99   		=  Tidak Lolos</p>
-
+                                    <p> -> Jurnal Nasional Terakreditasi = 7 </p>
+                                    <p> -> Jurnal Nasional berissn DOAJ = 6</p>
+                                    <p> -> Jurnal Nasional berissn Eksternal = 5</p>
+                                    <h6>3. Nilai = Bobot × Skor (Konversasi nilai angka ke huruf dan dana yang
+                                        dibiayai)</h6>
+                                    <p> -> 6.00 - 7.00 = Baik (5 juta)</p>
+                                    <p> -> 4.00 - 5.99 = Cukup (4 juta)</p>
+                                    <p> -> 3.00 - 3.99 = Kurang (3 juta)</p>
+                                    <p> -> < 2.99 = Tidak Lolos</p>
                                 </td>
 
                                 <div class="form-group float-right">
@@ -201,4 +239,59 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('script')
+    <script>
+        const nilai1 = document.querySelector('input[name="nilai_1"]');
+        const nilai2 = document.querySelector('input[name="nilai_2"]');
+        const nilai3 = document.querySelector('input[name="nilai_3"]');
+        const nilai4 = document.querySelector('input[name="nilai_4"]');
+        const nilai5 = document.querySelector('input[name="nilai_5"]');
+        const nilai6 = document.querySelector('input[name="nilai_6"]');
+        const nilai7 = document.querySelector('input[name="nilai_7"]');
+        const nilai8 = document.querySelector('input[name="nilai_8"]');
+
+        const skor1 = document.querySelector('input[name="skor_1"]');
+        const skor2 = document.querySelector('input[name="skor_2"]');
+        const skor3 = document.querySelector('input[name="skor_3"]');
+        const skor4 = document.querySelector('input[name="skor_4"]');
+        const skor5 = document.querySelector('input[name="skor_5"]');
+        const skor6 = document.querySelector('input[name="skor_6"]');
+        const skor7 = document.querySelector('input[name="skor_7"]');
+        const skor8 = document.querySelector('input[name="skor_8"]');
+
+        keyupNilai(nilai1);
+        keyupNilai(nilai2);
+        keyupNilai(nilai3);
+        keyupNilai(nilai4);
+        keyupNilai(nilai5);
+        keyupNilai(nilai6);
+        keyupNilai(nilai7);
+
+        keyupSkor(skor1);
+        keyupSkor(skor2);
+        keyupSkor(skor3);
+        keyupSkor(skor4);
+        keyupSkor(skor5);
+        keyupSkor(skor6);
+        keyupSkor(skor7);
+
+        var jumlahNilai = 0;
+        function keyupNilai(nilai) {
+            nilai.addEventListener('keyup', function () {
+                jumlahNilai += parseInt(nilai.value);
+                nilai8.value = jumlahNilai;
+            })
+        }
+
+        var jumlahSkor = 0;
+        function keyupSkor(skor) {
+            skor.addEventListener('keyup', function () {
+                jumlahSkor += parseInt(skor.value);
+                skor8.value = jumlahSkor;
+            })
+        }
+
+    </script>
 @endsection

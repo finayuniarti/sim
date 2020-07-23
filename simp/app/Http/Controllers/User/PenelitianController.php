@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class PenelitianController extends Controller
 {
@@ -24,6 +25,26 @@ class PenelitianController extends Controller
 
     public function store(Request $request)
     {
+        $rules = [
+            'judul' => 'required',
+            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120',
+            'nominal' => 'required|numeric',
+        ];
+
+        $message = [
+            'required' => ':attribute tidak boleh kosong',
+            'numeric' => ':atttribute hanya boleh angka',
+            'mimes' => ':attribute hanya boleh pdf',
+            'regex' => ':attribute hanya boleh huruf dan spasi'
+        ];
+
+        $this->validate($request, $rules, $message);
+
+//        $validator = Validator::make($request->all(), $rules);
+//        if ($validator->fails()) {
+//            return redirect()->back()->withErrors($validator);
+//        }
+
         $proposal = $request->file('proposal');
         //dd($proposal->getClientOriginalName());
         $name = $proposal->getClientOriginalName();

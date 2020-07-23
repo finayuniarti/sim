@@ -53,6 +53,7 @@ Route::group(['prefix' => 'user'], function (){
     Route::get('penelitian/download', 'User/PenelitianController@download')->name('user.penelitian.download');
 
     Route::get('penelitian/laporan', 'User\LaporanController@index')->name('user.laporan.index');
+    Route::post('penelitian/laporan', 'User\LaporanController@store')->name('user.laporan.store');
 
     Route::get('/pengabdian/create', 'User\PengabdianController@create')->name('user.pengabdian.create');
     Route::post('/pengabdian/create', 'User\PengabdianController@store')->name('user.pengabdian.store');
@@ -78,7 +79,7 @@ Route::group(['prefix' => 'reviewer'], function (){
    Route::patch('penelitian/revisi_proposal/{id}','Reviewer\PenelitianController@RevisiProposal')->name('reviewer.penelitian.revisi_proposal');
    Route::get('penelitian/acc_proposal/{id}','Reviewer\PenelitianController@acc')->name('reviewer.penelitian.acc_proposal');
    Route::get('penelitian/nilai/{id}','Reviewer\PenelitianController@nilai')->name('reviewer.penelitian.nilai');
-   Route::get('penelitian/pdf','Reviewer\PenelitianController@pdf')->name('reviewer.penelitian.pdf');
+   Route::post('penelitian/pdf','Reviewer\PenelitianController@pdf')->name('reviewer.penelitian.pdf');
 
    Route::get('pengabdian','Reviewer\PengabdianController@index')->name('reviewer.pengabdian.index');
    Route::get('pengabdian/download/{proposal}', 'Reviewer\PengabdianController@download')->name('reviewer.pengabdian.download');
@@ -86,6 +87,7 @@ Route::group(['prefix' => 'reviewer'], function (){
    Route::patch('pengabdian/revisi_proposal/{id}','Reviewer\PengabdianController@RevisiProposal')->name('reviewer.pengabdian.revisi_proposal');
    Route::get('pengabdian/acc_proposal/{id}','Reviewer\PengabdianController@acc')->name('reviewer.pengabdian.acc_proposal');
    Route::get('pengabdian/nilai/{id}','Reviewer\PengabdianController@nilai')->name('reviewer.pengabdian.nilai');
+   Route::post('pengabdian/pdf','Reviewer\PengabdianController@pdf')->name('reviewer.pengabdian.pdf');
 });
 
 Route::group(['prefix'=> 'kap3m'], function (){

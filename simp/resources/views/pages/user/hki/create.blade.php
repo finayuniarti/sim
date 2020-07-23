@@ -9,7 +9,15 @@
                         <div class="card-body">
 
                             <h4 class="card-title">Form Pengusulan HKI</h4>
-                            <p class="card-title-desc"><code>*</code>Wajib.</p>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <form action="{{route('user.hki.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">
@@ -32,7 +40,13 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Alamat</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="alamat">
+                                        <input class="form-control {{ $errors->has('alamat')?'is-invalid':'' }}"
+                                               type="text" name="alamat" value="{{ old('alamat') }}">
+                                        @if($errors->has('alamat'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('alamat') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -48,7 +62,13 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Judul Cipta</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="judul_cipta">
+                                        <input class="form-control {{ $errors->has('judul_cipta')?'is-invalid':''}}"
+                                               type="text" name="judul_cipta" value="{{old('judul_cipta')}}">
+                                        @if ($errors->has('judul_cipta'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('judul_cipta')}}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">

@@ -16,4 +16,20 @@ class LaporanController extends Controller
     {
         return view('pages.user.laporan.index');
     }
+
+    public function store(Request $request)
+    {
+
+        $rules = [
+            'tanggal_pelaksanaan' => 'required|date',
+            'tanggal_pemantauan' => 'required|date',
+            'judul' => 'required',
+        ];
+
+        $message = [
+            'required' => ':attribute tidak boleh kosong',
+        ];
+
+        $this->validate($request, $rules, $message);
+    }
 }

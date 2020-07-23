@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/simp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depan/img/poltek.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/pdf.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/AkunKap3mController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/AkunKap3mController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depan/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/depan/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depan/img/intro-bg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PenelitianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PenelitianController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PengabdianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Reviewer/PengabdianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/HkiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/HkiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/LaporanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/LaporanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PenelitianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PenelitianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PengabdianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PengabdianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/P3M.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/P3M.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/nilai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/nilai.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/nilai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/nilai.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/hki/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/hki/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/laporan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/laporan/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/pengabdian/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/pengabdian/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/reviewer/_script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/reviewer/_script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,16 +143,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/admin/akun/kap3m" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\pengabdian" />
+      <recent name="C:\wamp64\www\simp\depan\img" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\kap3m" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\hki" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\pengabdian" />
       <recent name="C:\wamp64\www\simp\assets\images" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\simp" />
@@ -201,7 +212,11 @@
       <workItem from="1594788846650" duration="9780000" />
       <workItem from="1594812671736" duration="4922000" />
       <workItem from="1594908188163" duration="2482000" />
-      <workItem from="1594967405741" duration="19758000" />
+      <workItem from="1594967405741" duration="20996000" />
+      <workItem from="1595137054997" duration="19464000" />
+      <workItem from="1595221146844" duration="3749000" />
+      <workItem from="1595406748357" duration="10140000" />
+      <workItem from="1595492208482" duration="11276000" />
     </task>
     <servers />
   </component>

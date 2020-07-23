@@ -23,6 +23,20 @@ class PengabdianController extends Controller
 
     public function store(Request $request)
     {
+        $rules = [
+            'judul' => 'required|regex:/^[a-zA-Z][a-zA-Z ]*$/',
+            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120',
+            'nominal' => 'required|numeric',
+        ];
+
+        $message = [
+            'required' => ':attribute tidak boleh kosong',
+            'numeric' => ':attribute tidak boleh kosong',
+            'mimes' => ':attribute hanya boleh pdf',
+            'regex' => ':attribute hanya boleh huruf dan spasi',
+        ];
+
+        $this->validate($request, $rules, $message);
         //dd($request->anggota);
 
 //        $proposal = $request->file('proposal');

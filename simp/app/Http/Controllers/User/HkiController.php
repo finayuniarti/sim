@@ -24,6 +24,17 @@ class HkiController extends Controller
 
     public function store(Request $request)
     {
+        $rules = [
+            'judul_cipta' => 'required|regex:/^[a-zA-Z][a-zA-Z ]*$/',
+            'alamat' => 'required',
+        ];
+
+        $message =[
+            'required' => ':attribute tidak boleh angka',
+            'regex' => ':attribute tidak boleh angka',
+        ];
+        $this->validate($request, $rules, $message);
+
         $data = new HKI();
         $data->id_user = Auth::guard('web')->user()->id;
         $data->name = Auth::guard('web')->user()->name;

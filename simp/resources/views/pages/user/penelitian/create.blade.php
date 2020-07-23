@@ -9,7 +9,17 @@
                         <div class="card-body">
 
                             <h4 class="card-title">Form Pengajuan Proposal Penelitian</h4>
-                            <form action="{{route('user.penelitian.store')}}" method="post" enctype="multipart/form-data">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{route('user.penelitian.store')}}" method="post"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-md-2 col-form-label">Tahun Akademik</label>
@@ -50,21 +60,39 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Judul</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="judul">
+                                        <input class="form-control {{$errors->has('judul')?'is-invalid':''}}" type="text"
+                                               name="judul" value="{{old('judul')}}">
+                                        @if ($errors->has('judul'))
+                                            <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('judul') }}</b></p>
+                                                    </span>
+                                        @endif
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Nominal</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="number" name="nominal">
+                                        <input class="form-control {{$errors->has('nominal')?'is-invalid':''}}"
+                                               type="number" name="nominal" value="{{old('nominal')}}">
+                                        @if ($errors->has('nominal'))
+                                            <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('nominal') }}</b></p>
+                                                    </span>
+                                        @endif
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Proposal</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="file" name="proposal" accept=".pdf">
+                                        <input class="form-control {{$errors->has('proposal')?'is-invalid':''}}"
+                                               type="file" name="proposal" value="{{old('proposal')}}">
+                                        @if ($errors->has('proposal'))
+                                            <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('proposal') }}</b></p>
+                                                    </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">

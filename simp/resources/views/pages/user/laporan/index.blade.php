@@ -9,7 +9,16 @@
                         <div class="card-body">
 
                             <h4 class="card-title">Form Laporan</h4>
-                            <form action="{{route('user.penelitian.store')}}" method="post" enctype="multipart/form-data">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{route('user.laporan.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-md-2 col-form-label">Tahun Akademik</label>
@@ -38,7 +47,13 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Judul Penelitian</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="judul">
+                                        <input class="form-control {{ $errors->has('judul')?'is-invalid':''}}"
+                                               type="text" name="judul" value="{{old('judul')}}">
+                                        @if ($errors->has('judul'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('judul')}}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -56,19 +71,37 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Tanggal Pemantauan</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="proposal">
+                                        <input class="form-control {{ $errors->has('tanggal_pemantauan')?'is-invalid':'' }}"
+                                               type="date" name="tanggal_pemantauan" value="{{old('tanggal_pemantauan')}}">
+                                        @if($errors->has('tanggal_pemantauan'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('tanggal_pemantauan') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Tanggal Pelaksanaan Penelitian</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="proposal">
+                                        <input class="form-control {{ $errors->has('tanggal_pelaksanaan')?'is-invalid':'' }}"
+                                               type="date" name="tanggal_pelaksanaan" value="{{old('tanggal_pelaksanaan')}}">
+                                        @if($errors->has('tanggal_pelaksanaan'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('tanggal_pelaksanaan') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Tanggal Selesai Penelitian</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="proposal">
+                                        <input class="form-control {{ $errors->has('tanggal_selesai')?'is-invalid':'' }}"
+                                               type="date" name="tanggal_selesai" value="{{old('tanggal_selesai')}}">
+                                        @if($errors->has('tanggal_selesai'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <p><b>{{ $errors->first('tanggal_selesai') }}</b></p>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 

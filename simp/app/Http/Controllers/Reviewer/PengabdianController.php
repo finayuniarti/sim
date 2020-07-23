@@ -6,6 +6,7 @@ use App\P3M;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class PengabdianController extends Controller
 {
@@ -52,5 +53,26 @@ class PengabdianController extends Controller
     {
         $pengabdian = P3M::findOrFail($id);
         return view('pages.reviewer.pengabdian.nilai', compact('pengabdian'));
+    }
+    public function pdf(Request $request)
+    {
+        $rules = [
+            'tema' => 'required',
+            'lama_teliti' => 'required|numeric',
+            'biaya_usul' => 'required|numeric',
+            'biaya_rekomendasi' => 'required|numeric',
+        ];
+
+        $message =[
+            'required' => ':attribute tidak boleh kosong',
+            'numeric' => ':atttribute hanya boleh angka',
+        ];
+
+        $this->validate($request, $rules, $message);
+
+//        return view('pages.reviewer.penelitian.pdf');
+        $pdf = PDF::loadView('pages.reviewer.pengabdian.pdf', compact('request'))->setPaper('a4');
+//      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
+        return $pdf->stream('laporan-pdf.pdf');
     }
 }

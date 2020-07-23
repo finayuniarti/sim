@@ -50,7 +50,7 @@ Header
             </div>
 
             <div class="col-md-6 intro-img order-md-last order-first">
-                <img src="img/intro-img.svg" alt="" class="img-fluid">
+{{--                <img src="{{asset('depan/img/gambar1.jpeg')}}" alt="" class="img-fluid">--}}
             </div>
         </div>
 

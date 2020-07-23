@@ -90,11 +90,40 @@ class PenelitianController extends Controller
         return view('pages.reviewer.penelitian.nilai', compact('penelitian'));
     }
 
-    public function pdf()
+    public function pdf(Request $request)
     {
-        //return view('pages.reviewer.penelitian.pdf');
-        $pdf = PDF::loadView('pages.reviewer.penelitian.pdf');
-      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
-        return $pdf->setPaper('a4')->stream('laporan-pdf.pdf');
+        $rules = [
+            'tema' => 'required',
+            'lama_teliti' => 'required|numeric',
+            'biaya_usul' => 'required|numeric',
+            'biaya_rekomendasi' => 'required|numeric',
+        ];
+
+        $message =[
+            'required' => ':attribute tidak boleh kosong',
+            'numeric' => ':atttribute hanya boleh angka',
+        ];
+
+        $this->validate($request, $rules, $message);
+
+
+        if ($this->validateSkorAndNilai($request->all())){
+            return redirect()->back()->with('error', 'nilai ataupun skor tidak boleh dari 7');
+        }
+//        return view('pages.reviewer.penelitian.pdf');
+        $pdf = PDF::loadView('pages.reviewer.penelitian.pdf', compact('request'))->setPaper('a4');
+//      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
+        return $pdf->stream('laporan-pdf.pdf');
+    }
+
+    public function validateSkorAndNilai($request){
+
+        if ($request['skor_1'] > 7 || $request['skor_2'] > 7 || $request['skor_3'] > 7 || $request['skor_4'] > 7 ||
+            $request['skor_5'] > 7 || $request['skor_6'] > 7 || $request['skor_7'] > 7 || $request['nilai_1'] > 7 ||
+            $request['nilai_2'] > 7 || $request['nilai_3'] > 7 || $request['nilai_4'] > 7
+            || $request['nilai_5'] > 7 || $request['nilai_6'] > 7 || $request['nilai_7'] > 7){
+            return redirect()->back()->withErrors($request);
+        }
+        return true;
     }
 }
