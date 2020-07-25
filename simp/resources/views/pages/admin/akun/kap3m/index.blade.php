@@ -44,6 +44,8 @@
                                     <a class="btn btn-warning" href="{{ route('admin.kap3m.edit', $data->id) }}"
                                     class="btn
                                     btn-warning">Edit</a>
+                                    <a class="btn btn-danger" href="{{ route('admin.kap3m.destroy', $data->id) }}"
+                                       onclick="return confirm('apkaah anda yakin akan menghapus user {{ $data->name }} ?')"> Hapus</a>
                                 </td>
                             </tr>
                         @endforeach

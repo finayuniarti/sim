@@ -6,6 +6,7 @@ use App\KaP3M;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AkunKap3mController extends Controller
 {
@@ -32,14 +33,24 @@ class AkunKap3mController extends Controller
     }
     public function edit($id)
     {
-        $datas = KaP3M::find($id);
-        return view('pages.admin.akun.kap3m.edit', compact('datas'));
-
+        $data = KaP3M::find($id);
+        return view('pages.admin.akun.kap3m.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
     {
-        $data = new KaP3M();
+        $data = KaP3M::find($id);
+
+        $validator = Validator::make($request->all(), [
+            'email' => 'email|unique:ka_p3_m_s,email,'.$data->id
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+               $validator->errors(),
+            ]);
+        }
+
         $data->name = $request->nama;
         $data->email =$request->email;
         $data->nidn =$request->nidn;
@@ -47,6 +58,14 @@ class AkunKap3mController extends Controller
             $data->password= Hash::make($request->password);
         }
         $data->save();
+        return redirect()->route('admin.kap3m.index')->with('success', 'Berhasil');
+    }
+
+    public function destroy($id)
+    {
+        $data = KaP3M::findOrfail($id);
+        $data->delete();
+
         return redirect()->route('admin.kap3m.index')->with('success', 'Berhasil');
     }
 }

@@ -25,32 +25,27 @@
 
                     <h4 class="card-title">Textual inputs</h4>
 
-                    <form action="{{route('admin.kap3m.update', $datas->id)}}" method="post">
+                    <form action="{{route('admin.kap3m.update', $data->id)}}" method="post">
                         @csrf
                         @method('patch')
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Nidn</label>
                             <div class="col-md-10">
-                                <input class="form-control {{$errors->has('nidn')?'is-invalid':''}}" value="{{$datas->data}}"
+                                <input class="form-control" readonly value="{{$data->nidn}}"
                                 type="number" name="nidn">
-                                @if($errors->has('nidn'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <p><b>{{$errors->first('nidn')}}</b></p>
-                                    </span>
-                                    @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Nama</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="nama">
+                                <input class="form-control" type="text" name="nama" value="{{$data->name}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="example-email-input" class="col-md-2 col-form-label">Email</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="email" name="email">
+                                <input class="form-control" type="email" name="email" value="{{$data->email}}">
                             </div>
                         </div>
                         <div class="form-group row">

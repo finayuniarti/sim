@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin'], function (){
     Route::post('akun/kap3m/store', 'Admin\AkunKap3mController@store')->name('admin.kap3m.store');
     Route::get('akun/{id}/edit', 'Admin\AkunKap3mController@edit')->name('admin.kap3m.edit');
     Route::patch('akun/update/{id}', 'Admin\AkunKap3mController@update')->name('admin.kap3m.update');
+    Route::get('akun/destroy/{id}', 'Admin\AkunKap3mController@destroy')->name('admin.kap3m.destroy');
 });
 
 Route::group(['prefix' => 'user'], function (){
