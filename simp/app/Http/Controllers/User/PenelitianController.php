@@ -27,7 +27,7 @@ class PenelitianController extends Controller
     {
         $rules = [
             'judul' => 'required',
-            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120',
+            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120|file',
             'nominal' => 'required|numeric',
         ];
 
