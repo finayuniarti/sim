@@ -27,6 +27,12 @@ class HomeController extends Controller
         return response()->download($file);
     }
 
+    public function downloadPenilaian($penilaian, $jenis_proposal)
+    {
+        $file = public_path('/uploads/user/'.$jenis_proposal.'/penilaian/'. $penilaian);
+        return response()->download($file);
+    }
+
     public function tolak($id)
     {
         $p3m = P3M::findOrFail($id);

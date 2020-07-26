@@ -35,6 +35,12 @@
                                 type="number" name="nidn">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-md-2 col-form-label">Prodi</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" name="prodi" required>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Nama</label>
@@ -46,6 +52,12 @@
                             <label for="example-email-input" class="col-md-2 col-form-label">Email</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="email" name="email" value="{{$data->email}}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-email-input" class="col-md-2 col-form-label">Password</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" name="password">
                             </div>
                         </div>
                         <div class="form-group row">

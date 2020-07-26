@@ -25,7 +25,7 @@
 
                     <h4 class="card-title">Textual inputs</h4>
 
-                    <form action="{{route('admin.kap3m.store')}}" method="post">
+                    <form action="{{route('admin.reviewer.store')}}" method="post">
                         @csrf
                         <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Nidn</label>
@@ -35,28 +35,32 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-md-2 col-form-label">Prodi</label>
-                            <div class="col-md-10">
-                                <input class="form-control" type="text" name="prodi" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-md-2 col-form-label">Nama</label>
+                            <label for="example-text-input" class="col-md-2 col-form-label">Nama Dosen</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="nama" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="example-email-input" class="col-md-2 col-form-label">Email</label>
+                            <label for="example-text-input" class="col-md-2 col-form-label">Email</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="email" name="email" required>
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Bidang Penelitian</label>
+                            <div class="col-md-10">
+                                <select class="form-control" name="bidang_penelitian">
+                                    <option readonly>----</option>
+                                    <option value="teknik">Teknik</option>
+                                    <option value="akuntansi">Akuntansi</option>
+                                    <option value="kesehatan">Kesehatan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="example-email-input" class="col-md-2 col-form-label">Password</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="password" required>
+                                <input class="form-control" type="text" name="password">
                             </div>
                         </div>
                         <div class="form-group row">

@@ -18,7 +18,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{route('user.pengabdian.store')}}" method="post">
+                            <form action="{{route('user.pengabdian.store')}}" enctype="multipart/form-data" method="post">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-md-2 col-form-label">Tahun Akademik</label>
@@ -47,7 +47,7 @@
                                 <div class="form-group row">
                                     <label class="control-label col-md-2">Anggota</label>
                                     <div class="col-md-10">
-                                        <select class="select2 form-control select2-multiple" multiple="multiple"
+                                        <select class="select2 form-control select2-multiple" required multiple="multiple"
                                                 data-placeholder="Choose ..." name="anggota[]">
                                             @foreach($datas as $data)
                                                 <option value="{{$data->id}}">{{$data->name}}</option>

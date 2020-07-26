@@ -41,6 +41,7 @@
                             <th>Nama</th>
                             <th>Jenis Proposal</th>
                             <th>Proposal</th>
+                            <th>Penilaian</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -52,7 +53,10 @@
                                 <td>{{$data->user->name}}</td>
                                 <td>{{$data->jenis_proposal}}</td>
                                 <td>
-                                    <a href="{{ route('kap3m.download',[ $data->proposal, $data->jenis_proposal]) }}">{{$data->proposal}}</a>
+                                    <a href="{{ route('kap3m.download',[ $data->proposal, $data->jenis_proposal]) }}">download</a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('kap3m.download.penilaian',[ $data->penilaian, $data->jenis_proposal]) }}">download</a>
                                 </td>
                                 <td>
                                     <a href="{{ route('kap3m.tolak', $data->id) }}" class="btn btn-danger btn-sm">tolak</a>

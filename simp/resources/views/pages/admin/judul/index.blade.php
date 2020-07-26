@@ -44,7 +44,12 @@
                                 <td>{{$data->user->name}}</td>
                                 <td>{{$data->judul}}</td>
                                 <td>{{$data->tahun}}</td>
-                                <td>{{$data->proposal}}</td>
+                                <td>
+                                    <a href="{{ route('admin.judul.download',[ $data->proposal, $data->jenis_proposal]) }}">download</a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.judul.download.penilaian',[ $data->penilaian, $data->jenis_proposal]) }}">download</a>
+                                </td>
                                 <td>{{$data->jenis_proposal}}</td>
                                 <td>{{$data->nominal}}</td>
                                 <td>

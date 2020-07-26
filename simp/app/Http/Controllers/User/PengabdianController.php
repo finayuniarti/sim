@@ -25,7 +25,7 @@ class PengabdianController extends Controller
     {
         $rules = [
             'judul' => 'required|regex:/^[a-zA-Z][a-zA-Z ]*$/',
-            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120',
+            'proposal' => 'required|mimetypes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|max:5120|file',
             'nominal' => 'required|numeric',
         ];
 
@@ -39,10 +39,10 @@ class PengabdianController extends Controller
         $this->validate($request, $rules, $message);
         //dd($request->anggota);
 
-//        $proposal = $request->file('proposal');
-//        $name = $proposal->getClientOriginalName();
-//        $destinationPath = public_path('uploads/user/pengabdian');
-//        $proposal->move($destinationPath, $name);
+        $proposal = $request->file('proposal');
+        $name = date('ymdHis') . "-" . $proposal->getClientOriginalName();
+        $destinationPath = public_path('uploads/user/pengabdian');
+        $proposal->move($destinationPath, $name);
 
         $data = new P3M();
         $data->id_user = Auth::guard('web')->user()->id;
@@ -50,7 +50,7 @@ class PengabdianController extends Controller
         $data->judul = $request->judul;
         $data->tahun = $request->tahun;
         $data->nominal = $request->nominal;
-        $data->proposal = $request->proposal;
+        $data->proposal = $name;
         $data->bidang_penelitian = $request->bidang_penelitian;
         $data->save();
 
@@ -82,7 +82,7 @@ class PengabdianController extends Controller
     {
         $proposal = $request->file('proposal');
         //dd($proposal->getClientOriginalName());
-        $name = $proposal->getClientOriginalName();
+        $name = date('ymdHis') . "-" . $proposal->getClientOriginalName();
         $destinationPath = public_path('uploads/user/pengabdian');
         $proposal->move($destinationPath, $name);
 

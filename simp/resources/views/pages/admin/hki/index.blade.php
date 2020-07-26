@@ -27,13 +27,22 @@
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>Id_user</th>
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Kewarganegaraan</th>
                             <th>Judul Cipta</th>
                         </tr>
                         </thead>
+                        <tbody>
+                        @foreach($datas as $data)
+                            <tr>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->alamat }}</td>
+                                <td>{{ $data->kewarganegaraan }}</td>
+                                <td>{{ $data->judul_cipta }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
                     </table>
 
                 </div>

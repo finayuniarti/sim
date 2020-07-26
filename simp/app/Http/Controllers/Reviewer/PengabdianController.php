@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Storage;
 
 class PengabdianController extends Controller
 {
@@ -14,14 +15,14 @@ class PengabdianController extends Controller
     {
         $auth = Auth::guard('reviewer')->user()->bidang_penelitian;
         $datas = P3M::where('bidang_penelitian', $auth)
-            ->where('jenis_proposal','pengabdian')
+            ->where('jenis_proposal', 'pengabdian')
             ->get();
         return view('pages.reviewer.pengabdian.index', compact('datas'));
     }
 
     public function download($proposal)
     {
-        $file = public_path('/uploads/user/pengabdian/'.$proposal);
+        $file = public_path('/uploads/user/pengabdian/' . $proposal);
         return response()->download($file);
     }
 
@@ -40,6 +41,7 @@ class PengabdianController extends Controller
 
         return redirect()->route('reviewer.pengabdian.index')->with('success', 'revisi telah dikirim');
     }
+
     public function acc($id)
     {
         $data = P3M::findOrFail($id);
@@ -49,13 +51,18 @@ class PengabdianController extends Controller
 
         return redirect()->route('reviewer.pengabdian.index')->with('success', 'proposal telah acc');
     }
+
     public function nilai($id)
     {
         $pengabdian = P3M::findOrFail($id);
         return view('pages.reviewer.pengabdian.nilai', compact('pengabdian'));
     }
-    public function pdf(Request $request)
+
+
+    public function pdf(Request $request, $id)
     {
+        $p3m = P3M::where('id', $id)->first();
+
         $rules = [
             'tema' => 'required',
             'lama_teliti' => 'required|numeric',
@@ -63,7 +70,7 @@ class PengabdianController extends Controller
             'biaya_rekomendasi' => 'required|numeric',
         ];
 
-        $message =[
+        $message = [
             'required' => ':attribute tidak boleh kosong',
             'numeric' => ':atttribute hanya boleh angka',
         ];
@@ -71,8 +78,13 @@ class PengabdianController extends Controller
         $this->validate($request, $rules, $message);
 
 //        return view('pages.reviewer.penelitian.pdf');
-        $pdf = PDF::loadView('pages.reviewer.pengabdian.pdf', compact('request'))->setPaper('a4');
-//      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
+        $name =  date('ymdHis') . '-penilaian.pdf';
+        $pdf = PDF::loadView('pages.reviewer.pengabdian.pdf', compact('request'))->setPaper('a4')
+            ->save(public_path('uploads/user/pengabdian/penilaian/' . $name));
+
+        $p3m->penilaian = $name;
+        $p3m->update();
+
         return $pdf->stream('laporan-pdf.pdf');
     }
 }

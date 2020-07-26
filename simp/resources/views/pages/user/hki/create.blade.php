@@ -18,6 +18,11 @@
                                     </ul>
                                 </div>
                             @endif
+                            @if($message = Session::get('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @endif
                             <form action="{{route('user.hki.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">

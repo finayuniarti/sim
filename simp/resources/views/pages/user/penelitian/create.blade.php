@@ -24,7 +24,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-2 col-form-label">Tahun Akademik</label>
                                     <div class="col-md-10">
-                                        <select class="form-control" name="tahun">
+                                        <select class="form-control" name="tahun" required>
                                             <option>----</option>
                                             <option value="2019/2020">2019/2020</option>
                                             <option value="2018/2019">2018/2019</option>
@@ -48,7 +48,7 @@
                                 <div class="form-group row">
                                     <label class="control-label col-md-2">Anggota</label>
                                     <div class="col-md-10">
-                                        <select class="select2 form-control select2-multiple" multiple="multiple"
+                                        <select class="select2 form-control select2-multiple" required multiple="multiple"
                                                 data-placeholder="Choose ..." name="anggota[]">
                                             @foreach($datas as $data)
                                                 <option value="{{$data->id}}">{{$data->name}}</option>

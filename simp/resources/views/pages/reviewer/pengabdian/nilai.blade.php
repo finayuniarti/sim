@@ -19,7 +19,7 @@
                                 </div>
                             @endif
 
-                            <form action="{{ route('reviewer.pengabdian.pdf') }}" method="post">
+                            <form action="{{ route('reviewer.pengabdian.pdf', $pengabdian) }}" method="post">
                                 @csrf
                                 <div class="form-group row">
 

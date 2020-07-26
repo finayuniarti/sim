@@ -27,7 +27,7 @@ class PenelitianController extends Controller
     {
         $rules = [
             'judul' => 'required',
-            'proposal' => 'required|mimes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|size:5120|file',
+            'proposal' => 'required|mimetypes:application/pdf, application/x-pdf,application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf|max:5120|file',
             'nominal' => 'required|numeric',
         ];
 
@@ -47,7 +47,7 @@ class PenelitianController extends Controller
 
         $proposal = $request->file('proposal');
         //dd($proposal->getClientOriginalName());
-        $name = $proposal->getClientOriginalName();
+        $name = date('ymdHis') . "-" . $proposal->getClientOriginalName();
         $destinationPath = public_path('uploads/user/penelitian');
         $proposal->move($destinationPath, $name);
 

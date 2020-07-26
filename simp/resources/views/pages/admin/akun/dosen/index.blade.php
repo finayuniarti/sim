@@ -14,6 +14,11 @@
                 </div>
 
             </div>
+            @if($message = Session::get('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ $message }}
+                </div>
+            @endif
         </div>
     </div>
     <!-- end page title -->
@@ -38,7 +43,9 @@
                             </div>
                             <div class="col-md-3">
                                 <button class="btn btn-success">Import User Data</button>
+                                <a href="{{route('admin.dosen.create')}}" class="btn btn-info">Tambah</a>
                             </div>
+
                         </div>
                         <br>
 
@@ -52,6 +59,7 @@
                             <th>Nama Dosen</th>
                             <th>Prodi</th>
                             <th>Email</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -60,6 +68,13 @@
                                 <td>{{$data->name}}</td>
                                 <td>{{$data->prodi}}</td>
                                 <td>{{$data->email}}</td>
+                                <td>
+                                    <a class="btn btn-warning"
+                                       href="{{ route('admin.dosen.edit', $data->id) }}">Edit</a>
+                                    <a class="btn btn-danger" href=" {{ route('admin.dosen.destroy', $data->id) }}"
+                                       onclick="return confirm('apkaah anda yakin akan menghapus user {{ $data->name }} ?')">
+                                        Hapus</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
