@@ -35,13 +35,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-md-2 col-form-label">Prodi</label>
-                            <div class="col-md-10">
-                                <input class="form-control" type="text" name="prodi" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="example-text-input" class="col-md-2 col-form-label">Nama</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="nama" required>
