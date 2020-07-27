@@ -26,7 +26,6 @@ class AkunKap3mController extends Controller
 //        dd($request->all());
         $data= new KaP3M();
         $data->nidn = $request->nidn;
-        $data->prodi = $request->prodi;
         $data->name = $request->nama;
         $data->email = $request->email;
         $data->password = Hash::make($request->nidn);
@@ -56,7 +55,6 @@ class AkunKap3mController extends Controller
         $data->name = $request->nama;
         $data->email =$request->email;
         $data->nidn =$request->nidn;
-        $data->prodi =$request->prodi;
         if ($request->password != null){
             $data->password= Hash::make($request->password);
         }
