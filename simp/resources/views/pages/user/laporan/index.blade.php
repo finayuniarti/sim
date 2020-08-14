@@ -47,9 +47,9 @@
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Judul Penelitian</label>
                                     <div class="col-md-10">
-                                        <input class="form-control {{ $errors->has('judul')?'is-invalid':''}}"
-                                               type="text" name="judul" value="{{old('judul')}}">
-                                        @if ($errors->has('judul'))
+                                        <input class="form-control {{ $errors->has('penelitian')?'is-invalid':''}}"
+                                               type="text" name="judul" value="{{old('penelitian')}}">
+                                        @if ($errors->has('penelitian'))
                                             <span class="invalid-feedback" role="alert">
                                                 <p><b>{{ $errors->first('judul')}}</b></p>
                                             </span>

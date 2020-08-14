@@ -16,6 +16,8 @@ class CreateP3MSTable extends Migration
         Schema::create('p3_m_s', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user')->unsigned();
+            $table->integer('id_reviewer1')->unsigned()->nullable();
+            $table->integer('id_reviewer2')->unsigned()->nullable();
             $table->string('judul');
             $table->char('tahun', 9);
             $table->integer('nominal');
@@ -29,6 +31,8 @@ class CreateP3MSTable extends Migration
             $table->enum('revisi',['0','1','2'])->default('1');
             $table->timestamps();
 
+            $table->foreign('id_reviewer1')->references('id')->on('p3_m_s')->onDelete('cascade');
+            $table->foreign('id_reviewer2')->references('id')->on('p3_m_s')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
         });
 

@@ -26,9 +26,20 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('logout', 'Admin\AuthController@logout')->name('admin.logout');
     Route::get('/', 'Admin\AkunController@index')->name('admin.akun.index');
 
-    Route::get('judul', 'Admin\JudulController@index')->name('admin.judul.index');
+    Route::get('judul', 'Admin\JudulController@index')->name('admin.judul.penelitian.index');
+
+    Route::get('penelitian', 'Admin\PenelitianController@index')->name('admin.judul.penelitian.index');
+    Route::get('judul/{id}/reviewer', 'Admin\JudulController@getReviewer')->name('admin.judul.reviewer');
+    Route::post('judul/reviewer/choose', 'Admin\JudulController@chooseReviewer')->name('admin.judul.reviewer.choose');
     Route::get('download/{proposal}/{jenis_proposal}', 'Admin\JudulController@download')->name('admin.judul.download');
     Route::get('download-penilaian/{proposal}/{jenis_proposal}', 'Admin\JudulController@downloadPenilaian')->name('admin.judul.download.penilaian');
+
+    Route::get('pengabdian', 'Admin\PengabdianController@index')->name('admin.judul.pengabdian.index');
+    Route::get('pengabdian/{id}/reviewer', 'Admin\PengabdianController@getReviewer')->name('admin.pengabdian.reviewer');
+    Route::post('pengabdian/reviewer/choose', 'Admin\PengabdianController@chooseReviewer')->name('admin.pengabdian.reviewer.choose');
+    Route::get('pengabdian/download/{proposal}/{jenis_proposal}', 'Admin\PengabdianController@download')->name('admin.pengabdian.download');
+    Route::get('pengabdian/download/penilaian/{proposal}/{jenis_proposal}', 'Admin\PengabdianController@downloadPenilaian')->name('admin.pengabdian.download.penilaian');
+
     Route::get('monev', 'Admin\MonevController@index')->name('admin.monev.index');
     Route::get('hki', 'Admin\HkiController@index')->name('admin.hki.index');
 

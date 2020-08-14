@@ -143,9 +143,19 @@
                                             <p>a. Ketajaman perumusan masalah</p>
                                             <p>b. Tujuan Penelitian</p>
                                         </td>
-                                        <td class="align-middle">15</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_1"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_1"></td>
+                                        <td class="align-middle" id="bobot_1">15</td>
+                                        <td class="align-middle">
+                                            <select name="skor_1" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input class="form-control" name="nilai_1" readonly></td>
                                     </tr>
 
                                     <tr>
@@ -154,9 +164,19 @@
                                             <h6>Peluang luaran penelitian/ Pengabdian Masyarakat:</h6>
                                             <p> a. Publikasi ilmiah</p>
                                         </td>
-                                        <td class="align-middle">15</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_2"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_2"></td>
+                                        <td class="align-middle" id="bobot_2">15</td>
+                                        <td class="align-middle">
+                                            <select name="skor_2" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_2"></td>
                                     </tr>
 
                                     <tr>
@@ -164,16 +184,36 @@
                                         <td>
                                             <p>b. Pengembangan iptek-sosbud</p>
                                         </td>
-                                        <td class="align-middle">15</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_3"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_3"></td>
+                                        <td class="align-middle" id="bobot_3">15</td>
+                                        <td class="align-middle">
+                                            <select name="skor_3" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_3"></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td><p>c. Pengayaan bahan ajar/ HAKI</p></td>
-                                        <td class="align-middle">10</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_4"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_4"></td>
+                                        <td class="align-middle" id="bobot_4">10</td>
+                                        <td class="align-middle">
+                                            <select name="skor_4" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_4"></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
@@ -181,9 +221,19 @@
                                             <h6>Metode penelitian/ Pengabdian Masyarakat :</h6>
                                             <p>Ketepatan dan kesesuaian metode yang digunakan</p>
                                         </td>
-                                        <td class="align-middle">15</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_5"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_5"></td>
+                                        <td class="align-middle" id="bobot_5">15</td>
+                                        <td class="align-middle">
+                                            <select name="skor_5" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_5"></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
@@ -193,9 +243,19 @@
                                             <p>b. Kemutakhiran</p>
                                             <p>c. Penyusunan daftar pustaka</p>
                                         </td>
-                                        <td class="align-middle">15</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_6"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_6"></td>
+                                        <td class="align-middle" id="bobot_6">15</td>
+                                        <td class="align-middle">
+                                            <select name="skor_6" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_6"></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
@@ -205,15 +265,29 @@
                                             <p>b. Kesesuaian biaya</p>
                                             <p>c.Kesesuaian personalia</p>
                                         </td>
-                                        <td class="align-middle">10</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_7"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_7"></td>
+                                        <td class="align-middle" id="bobot_7">10</td>
+                                        <td class="align-middle">
+                                            <select name="skor_7" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                            </select>
+                                        </td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_7"></td>
                                     </tr>
                                     <tr>
                                         <td colspan="2" align="center" class="align-middle"><h6>Jumlah</h6></td>
-                                        <td class="align-middle">100</td>
-                                        <td class="align-middle"><input class="form-control" name="skor_8"></td>
-                                        <td class="align-middle"><input class="form-control" name="nilai_8"></td>
+                                        <td colspan="2" class="align-middle" id="bobot_8">100</td>
+                                        <td class="align-middle"><input readonly class="form-control" name="nilai_8"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3" align="center" class="align-middle"><h6>Dana</h6></td>
+                                        <td colspan="2" class="align-middle"><input readonly class="form-control" name="nilai_9"></td>
                                     </tr>
 
                                     </tbody>
@@ -258,46 +332,55 @@
         const nilai6 = document.querySelector('input[name="nilai_6"]');
         const nilai7 = document.querySelector('input[name="nilai_7"]');
         const nilai8 = document.querySelector('input[name="nilai_8"]');
+        const nilai9 = document.querySelector('input[name="nilai_9');
 
-        const skor1 = document.querySelector('input[name="skor_1"]');
-        const skor2 = document.querySelector('input[name="skor_2"]');
-        const skor3 = document.querySelector('input[name="skor_3"]');
-        const skor4 = document.querySelector('input[name="skor_4"]');
-        const skor5 = document.querySelector('input[name="skor_5"]');
-        const skor6 = document.querySelector('input[name="skor_6"]');
-        const skor7 = document.querySelector('input[name="skor_7"]');
-        const skor8 = document.querySelector('input[name="skor_8"]');
+        const skor1 = document.querySelector('select[name="skor_1"]');
+        const skor2 = document.querySelector('select[name="skor_2"]');
+        const skor3 = document.querySelector('select[name="skor_3"]');
+        const skor4 = document.querySelector('select[name="skor_4"]');
+        const skor5 = document.querySelector('select[name="skor_5"]');
+        const skor6 = document.querySelector('select[name="skor_6"]');
+        const skor7 = document.querySelector('select[name="skor_7"]');
+        const skor8 = document.querySelector('select[name="skor_8"]');
 
-        keyupNilai(nilai1);
-        keyupNilai(nilai2);
-        keyupNilai(nilai3);
-        keyupNilai(nilai4);
-        keyupNilai(nilai5);
-        keyupNilai(nilai6);
-        keyupNilai(nilai7);
+        const bobot1 = document.querySelector('#bobot_1');
+        const bobot2 = document.querySelector('#bobot_2');
+        const bobot3 = document.querySelector('#bobot_3');
+        const bobot4 = document.querySelector('#bobot_4');
+        const bobot5 = document.querySelector('#bobot_5');
+        const bobot6 = document.querySelector('#bobot_6');
+        const bobot7 = document.querySelector('#bobot_7');
+        const bobot8 = document.querySelector('#bobot_8');
 
-        keyupSkor(skor1);
-        keyupSkor(skor2);
-        keyupSkor(skor3);
-        keyupSkor(skor4);
-        keyupSkor(skor5);
-        keyupSkor(skor6);
-        keyupSkor(skor7);
+        changeSkor(skor1, bobot1, nilai1);
+        changeSkor(skor2, bobot2, nilai2);
+        changeSkor(skor3, bobot3, nilai3);
+        changeSkor(skor4, bobot4, nilai4);
+        changeSkor(skor5, bobot5, nilai5);
+        changeSkor(skor6, bobot6, nilai6);
+        changeSkor(skor7, bobot7, nilai7);
 
-        var jumlahNilai = 0;
-        function keyupNilai(nilai) {
-            nilai.addEventListener('keyup', function () {
-                jumlahNilai += parseInt(nilai.value);
-                nilai8.value = jumlahNilai;
-            })
-        }
 
-        var jumlahSkor = 0;
-        function keyupSkor(skor) {
-            skor.addEventListener('keyup', function () {
-                jumlahSkor += parseInt(skor.value);
-                skor8.value = jumlahSkor;
-            })
+        let totalNilai = 0;
+        function changeSkor(s, b, n) {
+            s.addEventListener('change', function () {
+               let nilai = s.value * b.innerText;
+               n.value = nilai;
+
+               totalNilai += nilai;
+               let rata2 = totalNilai / 100;
+               nilai8.value = rata2;
+
+               if (rata2 > 6.00){
+                   nilai9.value ="Rp. 5.000.000"
+               }else if(rata2 > 4.00 && rata2 < 5.99){
+                   nilai9.value ="Rp. 4.000.000"
+               }else if(rata2 > 3.00 && rata2 < 3.99){
+                   nilai9.value ="Rp. 3.000.000"
+               }else {
+                   nilai9.value ="Tidak Lolos"
+               }
+            });
         }
 
     </script>

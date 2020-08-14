@@ -38,8 +38,6 @@
                         <h4 class="title"><a href="http://p3m.poltektegal.ac.id/">PROFIL P3M</a></h4>
                     </div>
                 </div>
-
-
             </div>
 
         </div>

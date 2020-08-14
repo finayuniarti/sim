@@ -31,3 +31,5 @@
 
 <!-- Datatable init js -->
 <script src="{{ asset('assets/js/pages/datatables.init.js') }}"></script>
+
+@yield('script')

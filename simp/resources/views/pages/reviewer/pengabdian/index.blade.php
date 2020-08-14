@@ -32,6 +32,7 @@
                             <th>Judul</th>
                             <th>Nominal</th>
                             <th>Proposal</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>

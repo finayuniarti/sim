@@ -25,7 +25,7 @@
 
                     <h4 class="card-title">Form Reviewer</h4>
 
-                    <form action="{{route('reviewer.penelitian.revisi_proposal', $data->id)}}" method="post">
+                    <form action="{{route('judul', $data->id)}}" method="post">
                         @csrf
                         @method('patch')
                         <div class="form-group row">

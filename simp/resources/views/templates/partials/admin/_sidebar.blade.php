@@ -4,7 +4,13 @@
         <li class="menu-title">Menu</li>
 
         <li>
-            <a href="{{ route('admin.judul.index') }}" class=" waves-effect"><i class="bx bxs-widget"></i><span>Rekap Judul</span></a>
+            <a href="javascript: void(0);" class="waves-effect">
+                <i class="bx bxs-widget"></i><span>Rekap Judul</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="{{ route('admin.judul.penelitian.index') }}">Proposal Penelitian</a></li>
+                <li><a href="{{ route('admin.judul.pengabdian.index') }}">Proposal Pengabdian</a></li>
+            </ul>
         </li>
         <li>
             <a href="{{ route('admin.monev.index') }}" class=" waves-effect"><i class="bx bx-bar-chart"></i><span>Rekap Monev</span></a>

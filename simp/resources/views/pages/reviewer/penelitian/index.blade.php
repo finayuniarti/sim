@@ -52,7 +52,7 @@
                                 <td>{{$data->nominal}}</td>
                                 <td>{{$data->user->name}}</td>
                                 <td>
-                                    <a href="{{ route('reviewer.penelitian.download', $data->proposal) }}">{{$data->proposal}}</a>
+                                    <a href="{{ route('admin.judul.penelitian.index', $data->proposal) }}">{{$data->proposal}}</a>
                                 </td>
                                 <td>
                                     @if($data->status == '1' && $data->revisi == '2')
