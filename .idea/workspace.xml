@@ -2,26 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484fa556-ee44-465f-a06c-488cda3c9f2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/judul/penelitian/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/admin/judul/pengabdian/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/NotifikasiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/201109171328-0-11391919579_20200928_140347_0000.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/201109171459-0-11391919579_20200928_140347_0000.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/201129152958-200812105448-penilaian (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/210210152024-200812105448-penilaian (2).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/210210152123-200812105448-penilaian (2).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/210210152218-200812105448-penilaian (2).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210155512-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210155613-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210155712-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210160928-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210161101-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/penelitian/penilaian/210210161506-penilaian.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031052848-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031053325-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031053812-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031053924-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031054108-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031055102-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031055236-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031055429-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031055457-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031055919-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031060059-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031060432-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031060539-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031061317-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031061903-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031062004-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031062142-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031062539-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031065339-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031065446-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031065609-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031070004-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031071330-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201031072447-FORM_PERTANGGUNGJAWABAN_PESERTA_DTS2020 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201109165921-0-11391919579_20200928_140347_0000.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201109170014-0-11391919579_20200928_140347_0000.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/201109170417-0-11391919579_20200928_140347_0000.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian/notify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/pengabdian/notify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/simp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/JudulController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/Admin/JudulController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/database/migrations/2020_04_07_061639_create_p3_m_s_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/database/migrations/2020_04_07_061639_create_p3_m_s_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/penilaian/200726150418-penilaian.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/penilaian/200726150510-penilaian.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/public/uploads/user/pengabdian/penilaian/200726150738-penilaian.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/admin/judul/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PenelitianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PenelitianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PengabdianController.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/Http/Controllers/User/PengabdianController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/simp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/nilai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/nilai.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/revisi_proposal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/revisi_proposal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/nilai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/pengabdian/nilai.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/laporan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/laporan/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/reviewer/penelitian/pdf.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/pages/user/pengabdian/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/pages/user/pengabdian/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/partials/user/_script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/templates/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/templates/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simp/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/simp/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,31 +180,36 @@
       <path value="$PROJECT_DIR$/simp/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/simp/vendor/sabberworm/php-css-parser" />
       <path value="$PROJECT_DIR$/simp/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/simp/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/simp/vendor/paragonie/sodium_compat" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aCQXjO8dn5UMQvtq6xEmxr0fAr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/admin/judul/pengabdian" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simp/resources/views/pages/user/penelitian" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\judul\pengabdian" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\reviewer" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\dosen" />
-      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\pengabdian" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\judul\penelitian" />
       <recent name="C:\wamp64\www\simp" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\reviewer\penelitian" />
       <recent name="C:\wamp64\www\simp\assets\images" />
       <recent name="C:\wamp64\www\simp\simp\resources\views\pages\kap3m\home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\user\penelitian" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\judul\pengabdian" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\reviewer" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin" />
+      <recent name="C:\wamp64\www\simp\simp\resources\views\pages\admin\akun\dosen" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,6 +274,18 @@
       <workItem from="1595901192250" duration="669000" />
       <workItem from="1596874614916" duration="10278000" />
       <workItem from="1597214618690" duration="17672000" />
+      <workItem from="1597908947315" duration="10290000" />
+      <workItem from="1603721833465" duration="7972000" />
+      <workItem from="1603777252821" duration="6897000" />
+      <workItem from="1603970976636" duration="3098000" />
+      <workItem from="1604121012487" duration="5446000" />
+      <workItem from="1604128096752" duration="484000" />
+      <workItem from="1604128898289" duration="524000" />
+      <workItem from="1604939907098" duration="2259000" />
+      <workItem from="1606662183924" duration="4726000" />
+      <workItem from="1612949737387" duration="6876000" />
+      <workItem from="1612968640529" duration="5008000" />
+      <workItem from="1617249537180" duration="829000" />
     </task>
     <servers />
   </component>
@@ -239,6 +304,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

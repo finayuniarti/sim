@@ -94,6 +94,8 @@
       <path value="$PROJECT_DIR$/simp/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/simp/vendor/sabberworm/php-css-parser" />
       <path value="$PROJECT_DIR$/simp/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/simp/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/simp/vendor/paragonie/sodium_compat" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

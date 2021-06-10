@@ -361,6 +361,7 @@
         changeSkor(skor7, bobot7, nilai7);
 
 
+
         let totalNilai = 0;
         function changeSkor(s, b, n) {
             s.addEventListener('change', function () {

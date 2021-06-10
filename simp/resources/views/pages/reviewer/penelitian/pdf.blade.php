@@ -154,9 +154,9 @@
         </tr>
         <tr>
             <td width="3%" colspan="2" class="text-center align-middle"><b>Jumlah</b></td>
-            <td width="20%" class="text-center align-middle">15</td>
+            <td width="20%" class="text-center align-middle">75</td>
             <td width="10%">{{ $request->skor_8 }}</td>
-            <td width="10%">{{ $request->skor_8 }}</td>
+            <td width="10%">{{ $request->nilai_8 }}</td>
         </tr>
         </tbody>
     </table>

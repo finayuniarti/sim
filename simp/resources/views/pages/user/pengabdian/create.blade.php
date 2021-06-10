@@ -46,16 +46,18 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="control-label col-md-2">Anggota</label>
-                                    <div class="col-md-10">
+                                    <div class="col-md-8">
                                         <select class="select2 form-control select2-multiple" required multiple="multiple"
-                                                data-placeholder="Choose ..." name="anggota[]">
+                                                data-placeholder="Choose ..." name="selectAnggota[]">
                                             @foreach($datas as $data)
-                                                <option value="{{$data->id}}">{{$data->name}}</option>
+                                                <option value="{{$data->id}}">{{$data->name}} </option>
                                             @endforeach
                                         </select>
-                                    </div>
 
+                                    </div>
+                                    <div class="col-md-2"><button class="btn btn-warning" type="MailNotify" title="Send Message">Send Message</button></div>
                                 </div>
+
                                 <div class="form-group row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Judul</label>
                                     <div class="col-md-10">

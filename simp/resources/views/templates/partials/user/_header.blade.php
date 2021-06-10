@@ -10,15 +10,31 @@
         <ul>
             @if(Auth::check())
                 <li class="active"><a href="{{route('user.home.index')}}">Home</a></li>
-                <li><a href="{{route('auth.logout')}}">Logout</a></li>
                 <li><a>{{Auth::guard('web')->user()->name}}</a></li>
-                <li><a href="{{ route('user.laporan.index') }}">Laporan</a></li>
+                <li class="active"><a href="{{ route('user.laporan.index') }}">Laporan</a></li>
+
                 @if(Request::is('user/penelitian/create'))
-                    <li><a href="{{ route('user.penelitian.revisi') }}">Notifikasi</a></li>
+                    <li class="active"><a href="{{ route('user.penelitian.revisi') }}">Revisi</a></li>
+                    <li class="active"><a href="{{ route('user.penelitian.notifikasi') }}">Notif</a></li>
                 @endif
                 @if(Request::is('user/pengabdian/create'))
-                    <li><a href="{{ route('user.pengabdian.revisi') }}">Notifikasi</a></li>
+                    <li>
+                        <a href="{{ route('user.pengabdian.revisi') }}">
+                            <span>Revisi</span>
+                            <span class="ml-2 pull-right-container">
+                                <small class="label pull-right" id="notify" style="background: yellow; padding: 3px;">0</small>
+                            </span>
+                        </a>
+                    <li class="active"><a href="{{'#'}}">Notif</a></li>
+                        <a href="{{ route('user.pengabdian.notif') }}">
+                            <span>Notif</span>
+                            <span class="ml-2 pull-right-container">
+                                <small class="label pull-right" id="notify" style="background: yellow; padding: 3px;">0</small>
+                            </span>
+                         </a>
+                    </li>
                 @endif
+                <li><a href="{{route('auth.logout')}}">Logout</a></li>
             @else
                 <li><a href="{{ route('auth.login') }}">Login</a></li>
             @endif

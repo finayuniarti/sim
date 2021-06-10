@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Anggota;
+use App\Mail\MailNotify;
 use App\P3M;
 use App\User;
 use Illuminate\Http\Request;
@@ -9,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 
 class PenelitianController extends Controller
 {
@@ -66,12 +69,21 @@ class PenelitianController extends Controller
             $item[] = [
                 'id_p3m' => $data->id,
                 'id_user' => Auth::guard('web')->user()->id,
-                'id_anggota' => $anggota
+                'id_anggota' => $anggota,
+                'notifikasi' => 'anda telah ditambahkan ke penelitian '.Auth::guard('web')->user()->name
             ];
         }
         DB::table('anggotas')->insert($item);
 
+        Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
         return redirect()->route('user.home.index');
+    }
+    public function notifkasi()
+    {
+//        $user = Auth::guard('web')->user()->id;
+//        $notifikasi = DB::table('anggotas')->where('id_anggota','=', $user)->get();
+//        dd($notifikasi);
+        return view('pages.user.penelitian.notig');
     }
 
     public function revisian()

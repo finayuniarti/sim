@@ -15,6 +15,15 @@ Route::get('/', function () {
     return redirect()->route('user.home.index');
 });
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+//Route::get('test', function () {
+//    event(new App\Events\PenelitianEvent( 'Someone'));
+//    return "Event has been sent!";
+//});
+
 
 //Route::get('penelitian', 'PenelitianController@index');
 //Route::get('penelitian/create', 'PenelitianController@create');
@@ -80,9 +89,16 @@ Route::group(['prefix' => 'user'], function (){
     Route::get('penelitian/revisi', 'User\PenelitianController@revisian')->name('user.penelitian.revisi');
     Route::patch('penelitian/{id}/revisi/upload', 'User\PenelitianController@uploadProposalAgain')->name('user.penelitian.uploadProposalAgain');
     Route::get('penelitian/download', 'User/PenelitianController@download')->name('user.penelitian.download');
+    Route::get('penelitian/notifikasi', 'User\PenelitianController@notifikasi')->name('user.penelitian.notifikasi');
 
     Route::get('penelitian/laporan', 'User\LaporanController@index')->name('user.laporan.index');
     Route::post('penelitian/laporan', 'User\LaporanController@store')->name('user.laporan.store');
+
+    Route::get('penelitian/notifikasi', 'User\notifikasiController@index')->name('user.laporan.index');
+    Route::get('penelitian/notifikasi', 'User\NotifikasiController@index')->name('user.penelitian.notifikasi');
+    Route::post('penelitian/notifikasi', 'User\notifikasiController@store')->name('user.laporan.store');
+
+    Route::get('pengabdian/notify', 'User\HomeController@notify');
 
     Route::get('/pengabdian/create', 'User\PengabdianController@create')->name('user.pengabdian.create');
     Route::post('/pengabdian/create', 'User\PengabdianController@store')->name('user.pengabdian.store');
@@ -93,6 +109,8 @@ Route::group(['prefix' => 'user'], function (){
 
     Route::get('/hki/create', 'User\HkiController@create')->name('user.hki.create');
     Route::post('/hki/create', 'User\HkiController@store')->name('user.hki.store');
+
+
 
 });
 

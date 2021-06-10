@@ -11,17 +11,4 @@
 <script src="{{asset('assets/js/app.js')}}"></script>
 
 
-{{--<script src="{{ asset('depan/lib/jquery/jquery.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/jquery/jquery-migrate.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/easing/easing.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/mobile-nav/mobile-nav.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/wow/wow.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/waypoints/waypoints.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/counterup/counterup.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/owlcarousel/owl.carousel.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/isotope/isotope.pkgd.min.js')}}"></script>--}}
-{{--<script src="{{ asset('depan/lib/lightbox/js/lightbox.min.js')}}"></script>--}}
-<!-- Contact Form JavaScript File -->
-{{--<script src="{{ asset('depan/contactform/contactform.js')}}"></script>--}}
-<!-- Template Main Javascript File -->
+

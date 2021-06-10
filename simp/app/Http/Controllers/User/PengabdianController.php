@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Anggota;
 use App\P3M;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailNotify;
 
 class PengabdianController extends Controller
 {
@@ -37,7 +40,7 @@ class PengabdianController extends Controller
         ];
 
         $this->validate($request, $rules, $message);
-        //dd($request->anggota);
+//        dd($request->MailNotify);
 
         $proposal = $request->file('proposal');
         $name = date('ymdHis') . "-" . $proposal->getClientOriginalName();
@@ -55,15 +58,20 @@ class PengabdianController extends Controller
         $data->save();
 
         $anggotas = $request->anggota;
-        foreach ($anggotas as $anggota){
-            $item[] = [
-                'id_p3m' => $data->id,
-                'id_user' => Auth::guard('web')->user()->id,
-                'id_anggota' => $anggota
-            ];
-        }
-        DB::table('anggotas')->insert($item);
+        if (is_array($anggotas)){
+            foreach ($anggotas as $anggota){
+                $item = [
+                    'id_p3m' => $data->id,
+                    'id_user' => Auth::guard('web')->user()->id,
+                    'id_anggota' => $anggota,
+                    'email' => Auth::guard('web')->user()->email
+                ];
+                $ang = Anggota::create($item);
+                $ang->user->sendNotify('success');
 
+            }
+        }
+        Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
         return redirect()->route('user.home.index');
     }
 
