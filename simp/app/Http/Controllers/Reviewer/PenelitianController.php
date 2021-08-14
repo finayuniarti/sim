@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Novay\WordTemplate\WordTemplate;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Str;
 
 class PenelitianController extends Controller
 {
@@ -18,17 +19,22 @@ class PenelitianController extends Controller
 
     public function index()
     {
-        $auth = Auth::guard('reviewer')->user()->bidang_penelitian;
-        // bidang peneltian == 'teknik'
-        $datas = P3M::where('bidang_penelitian', $auth)
-            ->where('jenis_proposal','penelitian')
-            ->get();
+        $auth_id = Auth::guard('reviewer')->user()->id;
+        $datas = P3M::where('jenis_proposal', 'penelitian')->where(function ($query) use ($auth_id) {
+            $query->where('id_reviewer1', $auth_id)->orWhere('id_reviewer2', $auth_id);
+        })->get();
         return view('pages.reviewer.penelitian.index', compact('datas'));
     }
 
     public function download($proposal)
     {
-        $file = public_path('/uploads/user/penelitian/'.$proposal);
+        $file = public_path('/uploads/user/penelitian/' . $proposal);
+        return response()->download($file);
+    }
+
+    public function downloadPenilaian($penilaian_name)
+    {
+        $file = public_path('/uploads/user/penelitian/penilaian/' . $penilaian_name);
         return response()->download($file);
     }
 
@@ -58,11 +64,11 @@ class PenelitianController extends Controller
         return redirect()->route('reviewer.penelitian.index')->with('success', 'proposal telah acc');
     }
 
-//    public function nilai()
-//    {
-//        $this->showEditpdf();
-//        return view('pages.reviewer.penelitian.nilai');
-//    }
+    //    public function nilai()
+    //    {
+    //        $this->showEditpdf();
+    //        return view('pages.reviewer.penelitian.nilai');
+    //    }
 
     private function showEditpdf()
     {
@@ -93,7 +99,7 @@ class PenelitianController extends Controller
     public function pdf(Request $request, $id)
     {
         $p3m = P3M::where('id', $id)->first();
-//        dd($request->all());
+        //        dd($request->all());
         $rules = [
             'tema' => 'required',
             'lama_teliti' => 'required|numeric',
@@ -101,7 +107,7 @@ class PenelitianController extends Controller
             'biaya_rekomendasi' => 'required|numeric',
         ];
 
-        $message =[
+        $message = [
             'required' => ':attribute tidak boleh kosong',
             'numeric' => ':atttribute hanya boleh angka',
         ];
@@ -109,29 +115,40 @@ class PenelitianController extends Controller
         $this->validate($request, $rules, $message);
 
 
-//        if ($this->validateSkorAndNilai($request->all())){
-//            return redirect()->back()->with('error', 'nilai ataupun skor tidak boleh dari 7');
-//        }
-//        return view('pages.reviewer.penelitian.pdf');
+        //        if ($this->validateSkorAndNilai($request->all())){
+        //            return redirect()->back()->with('error', 'nilai ataupun skor tidak boleh dari 7');
+        //        }
+        //        return view('pages.reviewer.penelitian.pdf');
 
         $this->validateSkorAndNilai($request->all());
 
-        $name =  date('ymdHis') . '-penilaian.pdf';
+        $reviewer_name = explode(' ', Auth::guard('reviewer')->user()->name);
+        $name = Str::slug(date('ymd-') . Str::random(4) . '-' . $reviewer_name[0] . '-penilaian') . '.pdf';
+
         $pdf = PDF::loadView('pages.reviewer.penelitian.pdf', compact('request'))->setPaper('a4')
             ->save(public_path('uploads/user/penelitian/penilaian/' . $name));
-        $p3m->penilaian = $name;
+        if ($p3m->id_reviewer1 == Auth::guard('reviewer')->user()->id) {
+            $p3m->penilaian = $name;
+            $p3m->nominal_rekomendasi1 = $request->biaya_rekomendasi;
+        } else {
+            $p3m->penilaian2 = $name;
+            $p3m->nominal_rekomendasi2 = $request->biaya_rekomendasi;
+        }
         $p3m->update();
-//      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
-
-        return $pdf->stream('laporan-pdf.pdf');
+        //      //PDF::loadView('pages.admin.beasiswa.pdf', $data);
+        return redirect()->route('reviewer.penelitian.index');
+        // return $pdf->stream($reviewer_name[0] . '-' . Str::random(6) . '-penilaian.pdf');
     }
 
-    public function validateSkorAndNilai($request){
+    public function validateSkorAndNilai($request)
+    {
 
-        if ($request['skor_1'] > 7 || $request['skor_2'] > 7 || $request['skor_3'] > 7 || $request['skor_4'] > 7 ||
+        if (
+            $request['skor_1'] > 7 || $request['skor_2'] > 7 || $request['skor_3'] > 7 || $request['skor_4'] > 7 ||
             $request['skor_5'] > 7 || $request['skor_6'] > 7 || $request['skor_7'] > 7 || $request['nilai_1'] > 7 ||
             $request['nilai_2'] > 7 || $request['nilai_3'] > 7 || $request['nilai_4'] > 7
-            || $request['nilai_5'] > 7 || $request['nilai_6'] > 7 || $request['nilai_7'] > 7){
+            || $request['nilai_5'] > 7 || $request['nilai_6'] > 7 || $request['nilai_7'] > 7
+        ) {
             return redirect()->back()->withErrors($request);
         }
         return true;

@@ -19,9 +19,9 @@ class Reviewer extends Authenticatable
     protected $guard = 'reviewer';
     protected $guarded = [];
 
-//    protected $fillable = [
-//        'name', 'email', 'password','nidn', 'foto', 'prodi'
-//    ];
+    //    protected $fillable = [
+    //        'name', 'email', 'password','nidn', 'foto', 'prodi'
+    //    ];
 
     /**
      * The attributes that should be hidden for arrays.

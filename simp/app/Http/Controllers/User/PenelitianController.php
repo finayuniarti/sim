@@ -43,10 +43,10 @@ class PenelitianController extends Controller
 
         $this->validate($request, $rules, $message);
 
-//        $validator = Validator::make($request->all(), $rules);
-//        if ($validator->fails()) {
-//            return redirect()->back()->withErrors($validator);
-//        }
+        //        $validator = Validator::make($request->all(), $rules);
+        //        if ($validator->fails()) {
+        //            return redirect()->back()->withErrors($validator);
+        //        }
 
         $proposal = $request->file('proposal');
         //dd($proposal->getClientOriginalName());
@@ -70,20 +70,20 @@ class PenelitianController extends Controller
                 'id_p3m' => $data->id,
                 'id_user' => Auth::guard('web')->user()->id,
                 'id_anggota' => $anggota,
-                'notifikasi' => 'anda telah ditambahkan ke penelitian '.Auth::guard('web')->user()->name
+                'notifikasi' => 'anda telah ditambahkan ke penelitian ' . Auth::guard('web')->user()->name
             ];
         }
         DB::table('anggotas')->insert($item);
 
-        Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
+        // Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
         return redirect()->route('user.home.index');
     }
     public function notifkasi()
     {
-//        $user = Auth::guard('web')->user()->id;
-//        $notifikasi = DB::table('anggotas')->where('id_anggota','=', $user)->get();
-//        dd($notifikasi);
-        return view('pages.user.penelitian.notig');
+        //        $user = Auth::guard('web')->user()->id;
+        //        $notifikasi = DB::table('anggotas')->where('id_anggota','=', $user)->get();
+        //        dd($notifikasi);
+        return view('pages.user.penelitian.notify');
     }
 
     public function revisian()
@@ -94,7 +94,6 @@ class PenelitianController extends Controller
 
     public function download()
     {
-
     }
 
     public function uploadProposalAgain(Request $request, $id)
@@ -112,5 +111,4 @@ class PenelitianController extends Controller
 
         return redirect()->route('user.penelitian.revisi')->with('success', 'berhasil upload proposal lagi');
     }
-
 }

@@ -29,19 +29,19 @@ Route::get('/', function () {
 //Route::get('penelitian/create', 'PenelitianController@create');
 //Route::post('penelitian', 'PenelitianController@store');
 
-Route::group(['prefix' => 'admin'], function (){
+Route::group(['prefix' => 'admin'], function () {
     Route::get('login', 'Admin\AuthController@getLogin')->name('admin.login');
     Route::post('login', 'Admin\AuthController@login')->name('admin.login.submit');
     Route::get('logout', 'Admin\AuthController@logout')->name('admin.logout');
     Route::get('/', 'Admin\AkunController@index')->name('admin.akun.index');
 
-    Route::get('judul', 'Admin\JudulController@index')->name('admin.judul.penelitian.index');
+    Route::get('judul', 'Admin\JudulController@index')->name('admin.judul.index');
 
     Route::get('penelitian', 'Admin\PenelitianController@index')->name('admin.judul.penelitian.index');
     Route::get('judul/{id}/reviewer', 'Admin\JudulController@getReviewer')->name('admin.judul.reviewer');
     Route::post('judul/reviewer/choose', 'Admin\JudulController@chooseReviewer')->name('admin.judul.reviewer.choose');
     Route::get('download/{proposal}/{jenis_proposal}', 'Admin\JudulController@download')->name('admin.judul.download');
-    Route::get('download-penilaian/{proposal}/{jenis_proposal}', 'Admin\JudulController@downloadPenilaian')->name('admin.judul.download.penilaian');
+    Route::get('download-penilaian/{p3m}', 'Admin\JudulController@downloadPenilaian')->name('admin.judul.download.penilaian');
 
     Route::get('pengabdian', 'Admin\PengabdianController@index')->name('admin.judul.pengabdian.index');
     Route::get('pengabdian/{id}/reviewer', 'Admin\PengabdianController@getReviewer')->name('admin.pengabdian.reviewer');
@@ -77,7 +77,7 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('akun/kap3m/destroy/{id}', 'Admin\AkunKap3mController@destroy')->name('admin.kap3m.destroy');
 });
 
-Route::group(['prefix' => 'user'], function (){
+Route::group(['prefix' => 'user'], function () {
     Route::get('login', 'User\AuthController@getLogin')->name('user.login');
     Route::post('login', 'User\AuthController@login')->name('user.login.submit');
     Route::get('logout', 'User\AuthController@logout')->name('user.logout');
@@ -109,34 +109,33 @@ Route::group(['prefix' => 'user'], function (){
 
     Route::get('/hki/create', 'User\HkiController@create')->name('user.hki.create');
     Route::post('/hki/create', 'User\HkiController@store')->name('user.hki.store');
-
-
-
 });
 
-Route::group(['prefix' => 'reviewer'], function (){
-   Route::get('login', 'Reviewer\AuthController@getLogin')->name('reviewer.login');
-   Route::post('a/login', 'Reviewer\AuthController@login')->name('reviewer.login.submit');
-   Route::get('logout', 'Reviewer\AuthController@logout')->name('reviewer.logout');
+Route::group(['prefix' => 'reviewer'], function () {
+    Route::get('login', 'Reviewer\AuthController@getLogin')->name('reviewer.login');
+    Route::post('a/login', 'Reviewer\AuthController@login')->name('reviewer.login.submit');
+    Route::get('logout', 'Reviewer\AuthController@logout')->name('reviewer.logout');
 
-   Route::get('penelitian','Reviewer\PenelitianController@index')->name('reviewer.penelitian.index');
-   Route::get('penelitian/download/{proposal}', 'Reviewer\PenelitianController@download')->name('reviewer.penelitian.download');
-   Route::get('penelitian/revisi_proposal/{id}','Reviewer\PenelitianController@getRevisiProposal')->name('reviewer.penelitian.get_revisi_proposal');
-   Route::patch('penelitian/revisi_proposal/{id}','Reviewer\PenelitianController@RevisiProposal')->name('reviewer.penelitian.revisi_proposal');
-   Route::get('penelitian/acc_proposal/{id}','Reviewer\PenelitianController@acc')->name('reviewer.penelitian.acc_proposal');
-   Route::get('penelitian/nilai/{id}','Reviewer\PenelitianController@nilai')->name('reviewer.penelitian.nilai');
-   Route::post('penelitian/{id}/pdf','Reviewer\PenelitianController@pdf')->name('reviewer.penelitian.pdf');
+    Route::get('penelitian', 'Reviewer\PenelitianController@index')->name('reviewer.penelitian.index');
+    Route::get('penelitian/download/{proposal}', 'Reviewer\PenelitianController@download')->name('reviewer.penelitian.download');
+    Route::get('penelitian/revisi_proposal/{id}', 'Reviewer\PenelitianController@getRevisiProposal')->name('reviewer.penelitian.get_revisi_proposal');
+    Route::patch('penelitian/revisi_proposal/{id}', 'Reviewer\PenelitianController@RevisiProposal')->name('reviewer.penelitian.revisi_proposal');
+    Route::get('penelitian/acc_proposal/{id}', 'Reviewer\PenelitianController@acc')->name('reviewer.penelitian.acc_proposal');
+    Route::get('penelitian/nilai/{id}', 'Reviewer\PenelitianController@nilai')->name('reviewer.penelitian.nilai');
+    Route::post('penelitian/{id}/pdf', 'Reviewer\PenelitianController@pdf')->name('reviewer.penelitian.pdf');
+    Route::get('penelitian/{p3m}/download-penilaian', 'Reviewer\PenelitianController@downloadPenilaian')->name('reviewer.penelitian.penilaian.download');
 
-   Route::get('pengabdian','Reviewer\PengabdianController@index')->name('reviewer.pengabdian.index');
-   Route::get('pengabdian/download/{proposal}', 'Reviewer\PengabdianController@download')->name('reviewer.pengabdian.download');
-   Route::get('pengabdian/revisi_proposal/{id}','Reviewer\PengabdianController@getRevisiProposal')->name('reviewer.pengabdian.get_revisi_proposal');
-   Route::patch('pengabdian/revisi_proposal/{id}','Reviewer\PengabdianController@RevisiProposal')->name('reviewer.pengabdian.revisi_proposal');
-   Route::get('pengabdian/acc_proposal/{id}','Reviewer\PengabdianController@acc')->name('reviewer.pengabdian.acc_proposal');
-   Route::get('pengabdian/nilai/{id}','Reviewer\PengabdianController@nilai')->name('reviewer.pengabdian.nilai');
-   Route::post('pengabdian/{id}/pdf','Reviewer\PengabdianController@pdf')->name('reviewer.pengabdian.pdf');
+    Route::get('pengabdian', 'Reviewer\PengabdianController@index')->name('reviewer.pengabdian.index');
+    Route::get('pengabdian/download/{proposal}', 'Reviewer\PengabdianController@download')->name('reviewer.pengabdian.download');
+    Route::get('pengabdian/revisi_proposal/{id}', 'Reviewer\PengabdianController@getRevisiProposal')->name('reviewer.pengabdian.get_revisi_proposal');
+    Route::patch('pengabdian/revisi_proposal/{id}', 'Reviewer\PengabdianController@RevisiProposal')->name('reviewer.pengabdian.revisi_proposal');
+    Route::get('pengabdian/acc_proposal/{id}', 'Reviewer\PengabdianController@acc')->name('reviewer.pengabdian.acc_proposal');
+    Route::get('pengabdian/nilai/{id}', 'Reviewer\PengabdianController@nilai')->name('reviewer.pengabdian.nilai');
+    Route::post('pengabdian/{id}/pdf', 'Reviewer\PengabdianController@pdf')->name('reviewer.pengabdian.pdf');
+    Route::get('pengabdian/{p3m}/download-penilaian', 'Reviewer\PenelitianController@downloadPenilaian')->name('reviewer.pengabdian.penilaian.download');
 });
 
-Route::group(['prefix'=> 'kap3m'], function (){
+Route::group(['prefix' => 'kap3m'], function () {
     Route::get('login', 'Kap3m\AuthController@getLogin')->name('kap3m.login');
     Route::post('login', 'Kap3m\AuthController@login')->name('kap3m.login.submit');
     Route::get('logout', 'Kap3m\AuthController@logout')->name('kap3m.logout');

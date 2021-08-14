@@ -12,20 +12,20 @@ class PenelitianController extends Controller
 {
     public function index()
     {
-        $auth = Auth::guard('admin')->user()->bidang_penelitian;
+        // $auth = Auth::guard('admin')->user()->bidang_penelitian;
         // bidang peneltian == 'teknik'
-        $datas = P3M::where('jenis_proposal','penelitian')->get();
+        $datas = P3M::where('jenis_proposal', 'penelitian')->get();
         return view('pages.admin.judul.penelitian.index', compact('datas'));
     }
     public function download($proposal, $jenis_proposal)
     {
-        $file = public_path('/uploads/user/'.$jenis_proposal.'/'.$proposal);
+        $file = public_path('/uploads/user/' . $jenis_proposal . '/' . $proposal);
         return response()->download($file);
     }
 
     public function downloadPenilaian($penilaian, $jenis_proposal)
     {
-        $file = public_path('/uploads/user/'.$jenis_proposal.'/penilaian/'. $penilaian);
+        $file = public_path('/uploads/user/' . $jenis_proposal . '/penilaian/' . $penilaian);
         return response()->download($file);
     }
 

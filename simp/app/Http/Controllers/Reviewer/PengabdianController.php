@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Reviewer;
 
 use App\P3M;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade as PDF;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PengabdianController extends Controller
 {
     public function index()
     {
-        $auth = Auth::guard('reviewer')->user()->bidang_penelitian;
-        $datas = P3M::where('bidang_penelitian', $auth)
-            ->where('jenis_proposal', 'pengabdian')
-            ->get();
+        $auth_id = Auth::guard('reviewer')->user()->id;
+        $datas = P3M::where('jenis_proposal', 'pengabdian')->where(function ($query) use ($auth_id) {
+            $query->where('id_reviewer1', $auth_id)->orWhere('id_reviewer2', $auth_id);
+        })->get();
         return view('pages.reviewer.pengabdian.index', compact('datas'));
     }
 
@@ -77,14 +77,21 @@ class PengabdianController extends Controller
 
         $this->validate($request, $rules, $message);
 
-//        return view('pages.reviewer.penelitian.pdf');
-        $name =  date('ymdHis') . '-penilaian.pdf';
+        $reviewer_name = explode(' ', Auth::guard('reviewer')->user()->name);
+        $name = Str::slug(date('ymd-') . Str::random(4) . '-' . $reviewer_name[0] . '-penilaian') . '.pdf';
+
         $pdf = PDF::loadView('pages.reviewer.pengabdian.pdf', compact('request'))->setPaper('a4')
             ->save(public_path('uploads/user/pengabdian/penilaian/' . $name));
-
-        $p3m->penilaian = $name;
+        if ($p3m->id_reviewer1 == Auth::guard('reviewer')->user()->id) {
+            $p3m->penilaian = $name;
+            $p3m->nominal_rekomendasi1 = $request->biaya_rekomendasi;
+        } else {
+            $p3m->penilaian2 = $name;
+            $p3m->nominal_rekomendasi2 = $request->biaya_rekomendasi;
+        }
         $p3m->update();
+        return redirect()->route('reviewer.pengabdian.index');
 
-        return $pdf->stream('laporan-pdf.pdf');
+        // return $pdf->stream($reviewer_name[0] . '-' . Str::random(6) . '-penilaian.pdf');
     }
 }
