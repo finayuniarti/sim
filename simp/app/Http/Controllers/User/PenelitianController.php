@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
+use App\Notifikasi;
+use App\Events\PenelitianEvent;
 
 class PenelitianController extends Controller
 {
@@ -70,20 +72,27 @@ class PenelitianController extends Controller
                 'id_p3m' => $data->id,
                 'id_user' => Auth::guard('web')->user()->id,
                 'id_anggota' => $anggota,
-                'notifikasi' => 'anda telah ditambahkan ke penelitian ' . Auth::guard('web')->user()->name
+                // 'notifikasi' => 'anda telah ditambahkan ke penelitian ' . Auth::guard('web')->user()->name
             ];
-        }
-        DB::table('anggotas')->insert($item);
 
+            $this->notifkasi($anggota,'penelitian',$data);
+        }
+
+       DB::table('anggotas')->insert($item);
         // Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
         return redirect()->route('user.home.index');
     }
-    public function notifkasi()
+
+    public function notifkasi($anggota,$tipe,$data)
     {
-        //        $user = Auth::guard('web')->user()->id;
-        //        $notifikasi = DB::table('anggotas')->where('id_anggota','=', $user)->get();
-        //        dd($notifikasi);
-        return view('pages.user.penelitian.notify');
+      Notifikasi::create([
+        'pesan' => 'Anda telah ditambahkan penelitian oleh '.Auth::guard('web')->user()->name.' dengan judul '.$data->judul,
+        'id_user' => $anggota,
+        'tipe' => $tipe,
+      ]);
+
+      event(new PenelitianEvent('success',$anggota));
+      return true;
     }
 
     public function revisian()

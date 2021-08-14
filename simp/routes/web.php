@@ -19,10 +19,10 @@ Route::get('/', function () {
 //    return view('welcome');
 //});
 
-//Route::get('test', function () {
+// Route::get('test', function () {
 //    event(new App\Events\PenelitianEvent( 'Someone'));
 //    return "Event has been sent!";
-//});
+// });
 
 
 //Route::get('penelitian', 'PenelitianController@index');
@@ -109,6 +109,9 @@ Route::group(['prefix' => 'user'], function () {
 
     Route::get('/hki/create', 'User\HkiController@create')->name('user.hki.create');
     Route::post('/hki/create', 'User\HkiController@store')->name('user.hki.store');
+
+    Route::get('notifikasi', 'User\NotifikasiController@index');
+    Route::get('notifikasi/{id}', 'User\NotifikasiController@update');
 });
 
 Route::group(['prefix' => 'reviewer'], function () {

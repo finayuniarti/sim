@@ -57,22 +57,36 @@ class PengabdianController extends Controller
         $data->bidang_penelitian = $request->bidang_penelitian;
         $data->save();
 
-        // $anggotas = $request->anggota;
-        // if (is_array($anggotas)){
-        //     foreach ($anggotas as $anggota){
-        //         $item = [
-        //             'id_p3m' => $data->id,
-        //             'id_user' => Auth::guard('web')->user()->id,
-        //             'id_anggota' => $anggota,
-        //             'email' => Auth::guard('web')->user()->email
-        //         ];
-        //         $ang = Anggota::create($item);
-        //         $ang->user->sendNotify('success');
+        $anggotas = $request->anggota;
+        if (is_array($anggotas)){
+            foreach ($anggotas as $anggota){
+                $item = [
+                    'id_p3m' => $data->id,
+                    'id_user' => Auth::guard('web')->user()->id,
+                    'id_anggota' => $anggota,
+                    // 'email' => Auth::guard('web')->user()->email
+                ];
 
-        //     }
-        // }
+                $this->notifkasi($anggota,'pengabdian',$data);
+                // $ang = Anggota::create($item);
+                // $ang->user->sendNotify('success');
+
+            }
+        }
         // Mail::to("yuniafina4@gmail.com")->send(new MailNotify());
         return redirect()->route('user.home.index');
+    }
+
+    public function notifkasi($anggota,$tipe,$data)
+    {
+      Notifikasi::create([
+        'pesan' => 'Anda telah ditambahkan pengabdian oleh '.Auth::guard('web')->user()->name.' dengan judul '.$data->judul,
+        'id_user' => $anggota,
+        'tipe' => $tipe,
+      ]);
+
+      event(new PenelitianEvent('success',$anggota));
+      return true;
     }
 
     public function revisian()

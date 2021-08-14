@@ -92,59 +92,5 @@ Header
 <script src="{{ asset('assets/libs/select2/js/select2.min.js')}}"></script>
 <script src="{{ asset('assets/js/pages/form-advanced.init.js')}}"></script>
 
-{{--<script src="https://js.pusher.com/7.0/pusher.min.js"></script>--}}
-{{--<script>--}}
-
-{{--    // Enable pusher logging - don't include this in production--}}
-{{--    Pusher.logToConsole = true;--}}
-
-{{--    var pusher = new Pusher('d3b9719084b5cf94c165', {--}}
-{{--        cluster: 'ap1'--}}
-{{--    });--}}
-
-{{--    var channel = pusher.subscribe('my-channel');--}}
-{{--    channel.bind('my-event', function(data) {--}}
-{{--        alert(JSON.stringify(data));--}}
-{{--    });--}}
-{{--</script>--}}
-
-
-
-@auth('web')
-    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <script>
-        const url = '{{config("app.url")}}';
-        const notify = document.querySelector('#notify');
-        async function notification() {
-            const notifyData = await getNotify();
-            notify.innerText = notifyData.length;
-            const pusher = new Pusher('d3b9719084b5cf94c165', {
-                cluster: 'ap1',
-                encrypted : true,
-            });
-            console.log(pusher);
-            const channel = pusher.subscribe('my-channel');
-            console.log(channel);
-            channel.bind('App\\Events\\PenelitianEvent',async function(data) {
-                const newNotifyData = await getNotify();
-                notify.innerText = newNotifyData.length;
-                alert('anda diajak');
-                swal({
-                    title: "Anda di ajak",
-                    allowOutsideClick: false
-                },function() {
-                    window.location = 'notif';
-                });
-            });
-        };
-
-        function  getNotify() {
-            return fetch('notify').then(res => res.json()).then(res => res);
-        }
-        notification()
-    </script>
-
-@endauth
-
 </body>
 </html>

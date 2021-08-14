@@ -15,19 +15,21 @@ class PenelitianEvent implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $message;
+    public $anggota;
 
-    public function __construct($message)
+    public function __construct($message, $anggota)
     {
         $this->message = $message;
+        $this->anggota = $anggota;
     }
 
     public function broadcastOn()
     {
-        return ['my-channel'];
+        return ['notification-user-'.$this->anggota];
     }
 
-    public function broadcastAs()
-    {
-        return 'my-event';
-    }
+    // public function broadcastAs()
+    // {
+    //     return 'notification-user';
+    // }
 }

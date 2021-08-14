@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'pusher_key' => env('PUSHER_APP_KEY', null),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
