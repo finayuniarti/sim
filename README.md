@@ -71,6 +71,8 @@ Instalation SIMP:
 ============================================================
 
     git clone https://github.com/finayuniarti/sim.git
+    
+    cd simp/
 	
     composer install 
 
