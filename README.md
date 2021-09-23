@@ -62,7 +62,8 @@ NGINX Conf.:
     location ~ /\.ht {
         deny all;
     }
-  }
+}
+
 
 * MySQL
 
