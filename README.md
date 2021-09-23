@@ -89,4 +89,9 @@ Pusher Requirement
     npm install --save-dev laravel-echo pusher-js
 
     npm run dev
+    
+    PUSHER_APP_ID=your-pusher-app-id
+    PUSHER_APP_KEY=your-pusher-key
+    PUSHER_APP_SECRET=your-pusher-secret
+    PUSHER_APP_CLUSTER=mt1
 
