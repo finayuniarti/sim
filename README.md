@@ -90,6 +90,9 @@ Pusher Requirement
 
     npm run dev
     
+ .env:
+============================================================
+
     PUSHER_APP_ID=your-pusher-app-id
     PUSHER_APP_KEY=your-pusher-key
     PUSHER_APP_SECRET=your-pusher-secret
